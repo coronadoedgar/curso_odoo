@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_invoice_report_graph" model="ir.ui.view"> <field name="name">invoice.report.graph</field>
+         <field name="model">invoice.report</field>
+         <field name="arch" type="xml">
+             <graph string="Invoices Analysis">
+								 <field name="partner_name"/>
+                 <field name="total" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+    <record id="view_invoice_report_pivot" model="ir.ui.view">
+         <field name="name">invoice.report.pivot</field>
+         <field name="model">invoice.report</field>
+         <field name="arch" type="xml">
+             <pivot string="Invoices Analysis" disable_linking="True">
+                 <field name="partner_id" type="row"/>
+                 <field name="date" type="col"/>
+                 <field name="total" type="measure"/>
+             </pivot>
+         </field>
+    </record>
+
+</odoo>

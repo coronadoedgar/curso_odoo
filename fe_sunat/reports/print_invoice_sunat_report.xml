@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+		<record id="paperformat_report_invoice_sunat_landscape" model="report.paperformat">
+		    <field name="name">Facturación Sunat Vertical</field>
+		    <field name="dpi">90</field>
+		    <field name="orientation">Landscape</field>
+		    <field name="margin_top">40</field>
+		    <field name="margin_bottom">20</field>
+		    <field name="margin_left">7</field>
+		    <field name="margin_right">7</field>
+		    <field name="header_line" eval="True"/>
+		    <field name="header_spacing">30</field>
+		</record>
+
+		<report
+			id="action_report_invoice_sunat"
+			string="Factura Electrónica"
+			model="invoice.sunat"
+			report_type="qweb-pdf"
+			file="fe_sunat.report_invoice_sunat"
+			name="fe_sunat.report_invoice_sunat"
+			print_report_name="'FE-{}'.format(object.name)"
+			paperformat="fe_sunat.paperformat_report_invoice_sunat_landscape"
+			/>
+	
+</odoo>

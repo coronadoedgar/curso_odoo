@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="action_partner_base_form_customer" model="ir.actions.act_window">
+		<field name="name">Cliente</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">partner.base</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('type', '=', 'customer')]</field>
+		<field name="context">{'default_type': 'customer'}</field>
+	</record>
+
+	<record id="action_partner_base_form_supplier" model="ir.actions.act_window">
+		<field name="name">Proveedor</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">partner.base</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[('type', '=', 'supplier')]</field>
+		<field name="context">{'default_type': 'supplier'}</field>
+	</record>
+
+	<record id="action_invoice_sunat_form" model="ir.actions.act_window">
+		<field name="name">Factura Electrónica</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">invoice.sunat</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a Invoice.
+                </p><p>
+                    Once the quotation is confirmed, it becomes a sales order.
+                    You'll be able to invoice it and collect payments.
+                    From the <i>Sales Orders</i> menu, you can track delivery
+                    orders or services.
+                </p>
+   	</field>
+		</record>
+
+	<record id="action_ticket_sunat_form" model="ir.actions.act_window">
+		<field name="name">Boleta Electrónica</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">ticket.sunat</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a Boleta.
+                </p><p>
+                    Once the quotation is confirmed, it becomes a sales order.
+                    You'll be able to invoice it and collect payments.
+                    From the <i>Sales Orders</i> menu, you can track delivery
+                    orders or services.
+                </p>
+   	</field>
+		</record>
+
+    <record id="action_invoice_report_graph" model="ir.actions.act_window">
+        <field name="name">Análisis FE</field>
+        <field name="res_model">invoice.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <record id="action_invoice_report_pivot" model="ir.actions.act_window">
+        <field name="name">Análisis FE</field>
+        <field name="res_model">invoice.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot</field>
+    </record>
+</odoo>

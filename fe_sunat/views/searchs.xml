@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_invoice_sunat_filter" model="ir.ui.view">
+		<field name="name">invoice.sunat</field>
+		<field name="model">invoice.sunat</field>
+		<field name="arch" type="xml">
+			<search string="Search Invoice">
+				<field name="name" string="Factura"/>
+				<separator/>
+				<filter name="state" string="Borrador" domain="[('state', '=', 'draft')]"/>
+				<filter name="state" string="Validado" domain="[('state', '=', 'done')]"/>
+				<separator/>
+				<filter name="group_by_partne_id" string="Cliente" context="{'group_by': 'partner_id'}"/>
+				<filter string="Periodo Aprobado" context="{'group_by': 'date_approved'}"/>
+			</search>
+		</field>
+	</record>
+
+</odoo>

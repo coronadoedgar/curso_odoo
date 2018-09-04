@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_partner_base_tree" model="ir.ui.view">
+		<field name="name">partner.base.tree</field>
+    <field name="model">partner.base</field>
+    <field name="arch" type="xml">
+			<tree string="Cliente">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_invoice_sunat_tree" model="ir.ui.view">
+		<field name="name">invoice.sunat.tree</field>
+    <field name="model">invoice.sunat</field>
+    <field name="arch" type="xml">
+			<tree string="Factura Sunat">
+				<field name="name"/>
+				<field name="date"/>
+				<field name="date_approved"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_ticket_sunat_tree" model="ir.ui.view">
+		<field name="name">ticket.sunat.tree</field>
+    <field name="model">ticket.sunat</field>
+    <field name="arch" type="xml">
+			<tree string="Boleta Sunat">
+				<field name="name"/>
+				<field name="description"/>
+			</tree>
+		</field>
+	</record>
+
+</odoo>

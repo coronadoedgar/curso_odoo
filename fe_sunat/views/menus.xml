@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <menuitem id="menu_main_sunat" name="Sunat"/>
+
+        <menuitem id="menu_sub_partner"
+						name="Cliente/Proveedor"
+						parent="menu_main_sunat"
+						sequence="1"
+						/>
+        <menuitem id="menu_partner_base_customer"
+            name="Cliente"
+            action="action_partner_base_form_customer"
+            parent="menu_sub_partner"
+            />
+        <menuitem id="menu_partner_base_supplier"
+            name="Proveedor"
+            action="action_partner_base_form_supplier"
+            parent="menu_sub_partner"
+            />
+
+        <menuitem id="menu_sub_sunat"
+            name="Sunat"
+            parent="menu_main_sunat"
+						sequence="2"
+            />
+        <menuitem id="menu_invoice_sunat"
+            name="Factura Electrónica"
+            action="action_invoice_sunat_form"
+            parent="menu_sub_sunat"
+            />
+        <menuitem id="menu_ticket_sunat"
+            name="Boleta Electrónica"
+            action="action_ticket_sunat_form"
+            parent="menu_sub_sunat"
+						/>
+
+        <menuitem id="menu_sub_report_sunat"
+            name="Informes"
+            parent="menu_main_sunat"
+						sequence="2"
+            />
+        <menuitem id="menu_invoice_report"
+            name="Factura Electrónica"
+            action="action_invoice_report_graph"
+            parent="menu_sub_report_sunat"
+            />
+        <menuitem id="menu_invoice_report_pivot"
+            name="Factura Electrónica 2"
+            action="action_invoice_report_pivot"
+            parent="menu_sub_report_sunat"
+            />
+
+</odoo>
